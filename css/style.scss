@@ -1,2 +1,30 @@
 @import 'reset';
 @import 'global';
+
+:root {
+	--purple: 	#731DD8;
+	--blue: 	#48A9A6;
+	--white: 	#E4DFDA;
+	--black: 	#1F271B;
+}
+
+body {
+	font-family: 'Summer Loving Sans';
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--purple);
+}
+
+h1 {
+	font-size: 25vw;
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);
+	z-index: 2;
+	color: #48A9A6;
+}
+p {
+	width: 100%;
+	font-family: 'Summer Loving Regular';
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);
+	z-index: 2;
+	color: #E4DFDA;
+}
