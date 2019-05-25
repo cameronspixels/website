@@ -10,10 +10,7 @@
 		<meta name="author" content="name">
 		<meta name="description" content="description here">
 		<meta name="keywords" content="keywords,here">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        
-        <link rel="prerender" href="http://127.0.0.1:5500/about.html" />
-
+		<link rel="stylesheet" href="css/style.css" type="text/css">
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script src="jquery.fittext.js"></script>
@@ -26,21 +23,18 @@
 					$("#h1").fitText(0.165);
 					$("#p").fitText(0.35);
 				}
+				
 				sizeText();
 				var transition = Barba.BaseTransition.extend({
 					start: function() {
-                        this.newContainerLoading.then(val => this.loadNewContent($(this.newContainer)));
-                        console.log('start function');
+						this.newContainerLoading.then(val => this.loadNewContent($(this.newContainer)));
 					},
 					loadNewContent: function(e) {
 						e.hide;
-                        var f = this;
-                        console.log('load content');
+						var f = this;
 						$(this.oldContainer).fadeOut(600).promise().done(() => {
-                            e.css('visibility', 'visible');
-                            console.log('fade out');
+							e.css('visibility', 'visible');
 							e.fadeIn(600, function() {
-                                console.log('fade in');
 								f.done();
 								sizeText();
 							});
@@ -63,13 +57,11 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
-			
-
 		</header>
 		<main id="barba-wrapper">
 			<div class="barba-container">
-				<h1 id="h1">Cameron</h1>
-				<p id="p">Front-end<br />web developer</p>
+				<h1 id="h1">About</h1>
+				<p id="p">Wanker</p>
 			</div>
 		</main>
 	</body>
