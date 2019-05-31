@@ -20,3 +20,24 @@
 	src: url('fonts/3948E7_2_0.eot');
 	src: url('fonts/3948E7_2_0.eot?#iefix') format('embedded-opentype'),url('fonts/3948E7_2_0.woff2') format('woff2'),url('fonts/3948E7_2_0.woff') format('woff'),url('fonts/3948E7_2_0.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Libre Bakersville';
+    font-weight: normal;
+    font-display: swap;
+    src: url('fonts/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Libre Bakersville';
+    font-weight: normal; font-style: italic;
+    font-display: swap;
+    src: url('fonts/LibreBaskerville-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Libre Bakersville';
+    font-weight: bold;
+    font-display: swap;
+    src: url('fonts/LibreBaskerville-Bold.ttf');
+}
