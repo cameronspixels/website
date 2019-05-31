@@ -12,12 +12,30 @@ body {
 	font-family: 'Summer Loving Sans';
 	width: 100%;
 	overflow: hidden;
-	background-color: var(--purple);
 }
 
 header {
+	height: 100vh; max-height: 100vh; width: 100%;
+	.home & {
+		background-color: var(--purple);
+		h1 {
+			color: #48A9A6;
+		}
+		p {
+			color: var(--white);
+		}
+	}
+	.about & {
+		background-color: #48A9A6;
+		h1 {
+			color: var(--purple);
+		}
+		p {
+			color: var(--white);
+		}
+	}
 	nav {
-		position: absolute; bottom: 2.25rem; left: 50%; transform: translateX(-50%);
+		position: absolute; bottom: 2.25rem; left: 50%; transform: translateX(-50%); z-index: 2;
 		ul {
 			text-align: center;
 			li {
@@ -36,34 +54,16 @@ header {
 			}
 		}
 	}
-}
-	
-
-main {
-	h1 {
-		font-size: 25vw;
+	.intro {
 		position: absolute; top: 50%; left: 50%; transform: translate(-50%, -68%);
-		z-index: 2;
-		color: #48A9A6;
-	}
-	#p {
-		width: 100%;
-		font-family: 'Summer Loving Regular'; line-height: .5; text-align: center;
-		position: absolute; top: 50%; left: 50%; transform: translate(-50%, -66%);
-		z-index: 2;
-		color: #E4DFDA;
-	}
-	.loading {
-		background-color: var(--white);
-		position: absolute; top: 0; bottom: 50px; left: 0; right: 0; z-index: 4;
+		h1 {
+			font-size: 25vw;
+		}
 		p {
-			position: absolute; top: 50%; left: 50%; transform: translate(-50%, -68%);
-			font-family: 'Summer Loving Regular'; font-size: 25vw;
+			width: 100%;
+			font-family: 'Summer Loving Regular'; line-height: .5; text-align: center;
+			position: absolute; top: 50%; left: 50%; transform: translate(-50%, -40%);
+			z-index: 2;
 		}
 	}
-	.wipe {
-		background-color: var(--black);
-		position: absolute; top: 0; bottom: 50px; left: 0; right: 0; z-index: 3;
-	}
 }
-

@@ -1,68 +1,53 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>title</title>
+	<meta name="author" content="name">
+	<meta name="description" content="description here">
+	<meta name="keywords" content="keywords,here">
 
+	<link rel="preload" href="css/style.css" as="style">
+	<link rel="preload" href="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" as="script">
+	<link rel="preload" href="jquery.fittext.js" as="script">
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js" as="script">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>title</title>
-		<meta name="author" content="name">
-		<meta name="description" content="description here">
-		<meta name="keywords" content="keywords,here">
-		<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script defer async src="jquery.fittext.js"></script>
+	<!--<script defer async src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>-->
+	<!--<script defer async src="page-transition.js"></script>-->
+	<script>
+		$(window).load(function() {
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script src="jquery.fittext.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
-
-		<script>
-			$(window).load(function() {
-				function sizeText() {
-					$("#h1").fitText(0.165);
-					$("#p").fitText(0.35);
-				}
-				
-				sizeText();
-				var transition = Barba.BaseTransition.extend({
-					start: function() {
-						this.newContainerLoading.then(val => this.loadNewContent($(this.newContainer)));
-					},
-					loadNewContent: function(e) {
-						e.hide;
-						var f = this;
-						$(this.oldContainer).fadeOut(600).promise().done(() => {
-							e.css('visibility', 'visible');
-							e.fadeIn(600, function() {
-								f.done();
-								sizeText();
-							});
-						});
-					}
-				});
-				Barba.Pjax.getTransition = function() {
-					return transition;
-				}
-				Barba.Pjax.start();
-			});
-		</script>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="about.html">About</a></li>
-					<li><a href="index.html">Portfolio</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main id="barba-wrapper">
-			<div class="barba-container">
-				<h1 id="h1">About</h1>
-				<p id="p">Wanker</p>
-			</div>
-		</main>
-	</body>
+			function sizeText() {
+				$("h1").fitText(0.165);
+				$("p").fitText(0.35);
+			}
+			// Call size text on page load.
+			sizeText();
+		});
+	</script>
+</head>
+<body class="about">
+	<header>
+		<nav>
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="index.html">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="intro">
+			<h1>About</h1>
+			<p>Front-end<br />web developer</p>
+		</div>
+	</header>
+	<main>
+		
+	</main>
+</body>
 </html>
