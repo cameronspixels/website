@@ -136,7 +136,20 @@ header {
                     margin: 0;
                 }
             }
-            
+        }
+    }
+    .portfolio {
+        &__link {
+            text-decoration: none;
+            h2 {
+                font-family: 'Summer Loving Regular'; font-size: 11rem;
+                color: var(--purple);
+            }
+            p {
+                position: relative; transform: translate(72px, -12px);
+                font-family: 'Summer Loving Sans'; font-size: 3rem;
+                color: var(--black);
+            }
         }
     }
 }

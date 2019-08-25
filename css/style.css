@@ -726,3 +726,22 @@ header .intro__sub {
 .main .about__text p:last-child {
   margin: 0;
 }
+
+.main .portfolio__link {
+  text-decoration: none;
+}
+
+.main .portfolio__link h2 {
+  font-family: 'Summer Loving Regular';
+  font-size: 11rem;
+  color: var(--purple);
+}
+
+.main .portfolio__link p {
+  position: relative;
+  -webkit-transform: translate(72px, -12px);
+          transform: translate(72px, -12px);
+  font-family: 'Summer Loving Sans';
+  font-size: 3rem;
+  color: var(--black);
+}
