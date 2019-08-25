@@ -13,7 +13,8 @@
 body {
 	font-family: 'IBM Plex Serif', serif;
 	width: 100%;
-	//overflow: hidden;
+    //overflow: hidden;
+    overflow-x: hidden;
 }
 
 header {
@@ -38,6 +39,19 @@ header {
             &__sub {
                 color: var(--white);
                 line-height: .4;
+            }
+        } 
+    }
+    .portfolio & {
+		background-color: #48A9A6;
+		.intro {
+            &__heading {
+                color: var(--purple);
+            }
+            &__sub {
+                top: 45%;
+                color: var(--white);
+                line-height: .5;
             }
         } 
 	}

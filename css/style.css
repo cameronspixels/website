@@ -542,6 +542,7 @@ table {
 body {
   font-family: 'IBM Plex Serif', serif;
   width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -573,6 +574,20 @@ header {
 .about header .intro__sub {
   color: var(--white);
   line-height: .4;
+}
+
+.portfolio header {
+  background-color: #48A9A6;
+}
+
+.portfolio header .intro__heading {
+  color: var(--purple);
+}
+
+.portfolio header .intro__sub {
+  top: 45%;
+  color: var(--white);
+  line-height: .5;
 }
 
 header .nav {
