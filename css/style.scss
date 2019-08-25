@@ -81,7 +81,7 @@ header {
 
 .main {
     .main-section {
-        padding: 60px 0;
+        padding: 80px 0 110px; min-height: calc(100vh - 190px);
         &.white {
             background-color: var(--very-white); color: var(--blue); 
         }
@@ -104,7 +104,7 @@ header {
                 filter: grayscale(70%);
             }
             &_title {
-                position: absolute; bottom: -50px; left: 0; right: 0; z-index: 2;
+                position: absolute; bottom: -57px; left: 0; right: 0; z-index: 2;
                 font-family: 'Summer Loving Regular'; font-size: 14vw; line-height: 1; text-align: center;
                 color: #48A9A6;
             }
@@ -112,9 +112,9 @@ header {
         &__text {
             height: 100%;
             display: flex; align-items: center;
-             font-size: 1.5vw; line-height: 1.65;
+            font-size: 1.2rem; line-height: 1.65;
             &_wrapper {
-                margin: -20px 0 0;
+                margin: -28px 0 0;
             }
             p {
                 margin: 0 0 20px;
