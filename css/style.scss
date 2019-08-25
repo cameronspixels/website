@@ -11,7 +11,7 @@
 }
 
 body {
-	font-family: 'Libre Bakersville', serif;
+	font-family: 'IBM Plex Serif', serif;
 	width: 100%;
 	//overflow: hidden;
 }
@@ -112,7 +112,7 @@ header {
         &__text {
             height: 100%;
             display: flex; align-items: center;
-            font-family: 'Libre Bakersville'; font-size: 1.5vw; line-height: 1.65;
+             font-size: 1.5vw; line-height: 1.65;
             &_wrapper {
                 margin: -20px 0 0;
             }
