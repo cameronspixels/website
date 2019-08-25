@@ -24,8 +24,8 @@
 		$(window).load(function() {
 
 			function sizeText() {
-				$("h1").fitText(0.165);
-				$("p").fitText(0.35);
+				$(".intro__heading").fitText(0.12);
+				$(".intro__sub").fitText(0.23);
 			}
 			// Call size text on page load.
 			sizeText();
@@ -33,21 +33,41 @@
 	</script>
 </head>
 <body class="about">
-	<header>
-		<nav>
-			<ul>
-				<li><a href="about.html">About</a></li>
-				<li><a href="index.html">Portfolio</a></li>
-				<li><a href="#">Contact</a></li>
+	<header class="header">
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__list_item"><a href="index.html">Home</a></li>
+				<li class="nav__list_item"><a href="index.html">Portfolio</a></li>
+				<li class="nav__list_item"><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 		<div class="intro">
-			<h1>About</h1>
-			<p>Front-end<br />web developer</p>
+			<h1 class="intro__heading">About</h1>
+			<p class="intro__sub">Me</p>
 		</div>
 	</header>
-	<main>
-		
+	<main class="main" id="main">
+        <section class="main-section about white">
+            <div class="grid-wrapper grid-md">
+                <div class="grid-1"></div>
+                <div class="grid-5">
+                    <div class="about__image">
+                        <img src="immagine.webp" alt="A picture of Cameron">
+                        <h2 class="about__image_title">About</h2>
+                    </div>
+                </div>
+                <div class="grid-5">
+                    <div class="about__text">
+                        <div class="about__text_wrapper">
+                            <p>Hi, I'm Cameron, a web developer based in Manchester, UK.</p>
+                            <p>I like working with front-end technologies, mixing in some deisgn and thought towards user experience.</p>
+                            <p>Work with content management systems has also landed a growing knowledge of PHP, but that's a more fractious relationship.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-1"></div>
+            </div>
+        </section>
 	</main>
 </body>
 </html>
