@@ -531,28 +531,6 @@ table {
   src: url("fonts/plex_serif/IBMPlexSerif-Bold.eot") format("embedded-opentype"), url("fonts/plex_serif/IBMPlexSerif-Bold.woff2") format("woff2"), url("fonts/plex_serif/IBMPlexSerif-Bold.woff") format("woff"), url("fonts/plex_serif/IBMPlexSerif-Bold.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: 'Libre Bakersville';
-  font-weight: normal;
-  font-display: swap;
-  src: url("fonts/LibreBaskerville-Regular.ttf");
-}
-
-@font-face {
-  font-family: 'Libre Bakersville';
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-  src: url("fonts/LibreBaskerville-Italic.ttf");
-}
-
-@font-face {
-  font-family: 'Libre Bakersville';
-  font-weight: bold;
-  font-display: swap;
-  src: url("fonts/LibreBaskerville-Bold.ttf");
-}
-
 :root {
   --purple: 	#731DD8;
   --blue: 	#48A9A6;
