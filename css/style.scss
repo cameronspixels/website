@@ -56,7 +56,7 @@ header {
         } 
 	}
 	.nav {
-        position: absolute; bottom: 2.25rem; left: 50%; transform: translateX(-50%); z-index: 2;
+        position: absolute; bottom: 1.8rem; left: 50%; transform: translateX(-50%); z-index: 2;
         font-family: 'Summer Loving Sans', Impact, sans-serif;
 		&__list {
 			text-align: center;
@@ -64,11 +64,25 @@ header {
 				margin-right: 1.6rem;
 				display: inline-block; line-height: 1;
 				a {
+                    padding: 0 0 7px;
 					color: var(--white); text-decoration: none;
-					font-size: 2.5rem;
-					&:hover, &:focus {
-						text-decoration: underline;
-					}
+                    font-size: 2.5rem;
+                    display: block;
+                    position: relative; overflow: hidden;
+                    &:after {
+                        content: '';
+                        height: 4px; width: 100%;
+                        position: absolute; bottom: 0; left: 0;
+                        background-color: var(--white);
+
+                        transform: translateX(-101%);
+                    }
+                    &:hover, &:focus, &:active {
+                        text-decoration: none;
+                        &:after {
+                            transform: translateX(0);
+                        }
+                    }
 				}
 				&:last-child {
 					margin-right: 0;
@@ -94,10 +108,16 @@ header {
 }
 
 .main {
+    h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+        font-size: 1.2rem; line-height: 1.5; 
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 0.7;
+    }
     .main-section {
         padding: 80px 0 110px; min-height: calc(100vh - 190px);
         &.white {
-            background-color: var(--very-white); color: var(--blue); 
+            background-color: var(--very-white); color: #48A9A6;
         }
     }
     .about {
@@ -132,6 +152,7 @@ header {
             }
             p {
                 margin: 0 0 20px;
+                color: var(--black);
                 &:last-child {
                     margin: 0;
                 }
@@ -140,15 +161,37 @@ header {
     }
     .portfolio {
         &__link {
+            margin: 0 0 40px;
+            display: block;
             text-decoration: none;
             h2 {
                 font-family: 'Summer Loving Regular'; font-size: 11rem;
                 color: var(--purple);
             }
             p {
-                position: relative; transform: translate(72px, -12px);
+                padding-left: 39px;
+                position: relative; z-index: 1; //overflow: hidden;
+                transform: translate(31px, 12px); 
                 font-family: 'Summer Loving Sans'; font-size: 3rem;
                 color: var(--black);
+                &:after {
+                    content: '|';
+                    font-family: 'Summer Loving Regular';
+                    color: #48A9A6;
+                    font-size: 20rem; line-height: 1; 
+                    position: absolute; z-index: -1; left: 94px; bottom: -126px;
+                    transform: rotateZ(81deg);
+                    clip-path: ellipse(108% 90% at 0 179%);
+                    transition: clip-path 60ms ease-out;
+                }
+            }
+            &:hover, &:focus, &:active {
+                p {
+                    &:after {
+                        transform: rotateZ(81deg);
+                        clip-path: ellipse(108% 190% at 0 179%);
+                    }
+                }
             }
         }
     }
