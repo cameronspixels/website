@@ -11,7 +11,11 @@
 
 	<link rel="preload" href="css/style.css" as="style">
 	<link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" as="script">
-	<link rel="preload" href="jquery.fittext.js" as="script">
+    <link rel="preload" href="css/fonts/3948E7_0_0.woff2" as="script">
+    <link rel="preload" href="css/fonts/plex_serif/IBMPlexSerif-Regular.woff2" as="script">
+    <link rel="preload" href="css/fonts/3948E7_0_0.woff2" as="script">
+
+    <link rel="preload" href="css/style.css" as="font">
 
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	
@@ -20,15 +24,17 @@
 	<script defer async src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 	<!--<script defer async src="page-transition.js"></script>-->
 	<script>
-		$(window).load(function() {
+        $(document).ready(function() {
+            function sizeText() {
+                $(".intro__heading").fitText(0.165);
+                $(".intro__sub").fitText(0.35);
+            }
 
-			function sizeText() {
-				$(".intro__heading").fitText(0.165);
-				$(".intro__sub").fitText(0.35);
-			}
-			// Call size text on page load.
-			sizeText();
-		});
+            $(window).load(function() {
+                // Call size text on page load.
+                sizeText();
+            });
+        });
 	</script>
 </head>
 <body class="home">
