@@ -3,11 +3,11 @@
 @import 'global';
 
 :root {
-	--purple: 	#731DD8;
-	--blue: 	#48A9A6;
-    --white: 	#E4DFDA;
-    --very-white: #FFF;
-	--black: 	#1F271B;
+	--purple: 	    #731DD8;
+    --blue:         #48A9A6;
+    --white: 	    #E4DFDA;
+    --very-white:   #FFF;
+	--black: 	    #1F271B;
 }
 
 body {
@@ -23,7 +23,7 @@ header {
         background-color: var(--purple);
         .intro {
             &__heading {
-                color: #48A9A6;
+                color: var(--blue);
             }
             &__sub {
                 color: var(--white);
@@ -31,7 +31,7 @@ header {
         }
 	}
 	.about & {
-		background-color: #48A9A6;
+		background-color: var(--blue);
 		.intro {
             &__heading {
                 color: var(--purple);
@@ -43,7 +43,7 @@ header {
         } 
     }
     .portfolio & {
-		background-color: #48A9A6;
+		background-color: var(--blue);
 		.intro {
             &__heading {
                 color: var(--purple);
@@ -117,7 +117,7 @@ header {
     .main-section {
         padding: 80px 0 110px; min-height: calc(100vh - 190px);
         &.white {
-            background-color: var(--very-white); color: #48A9A6;
+            background-color: var(--very-white); color: var(--blue);
         }
     }
     .about {
@@ -140,7 +140,7 @@ header {
             &_title {
                 position: absolute; bottom: -57px; left: 0; right: 0; z-index: 2;
                 font-family: 'Summer Loving Regular'; font-size: 14vw; line-height: 1; text-align: center;
-                color: #48A9A6;
+                color: var(--blue);
             }
         }
         &__text {
@@ -177,7 +177,7 @@ header {
                 &:after {
                     content: '|';
                     font-family: 'Summer Loving Regular';
-                    color: #48A9A6;
+                    color: var(--blue);
                     font-size: 20rem; line-height: 1; 
                     position: absolute; z-index: -1; left: 94px; bottom: -126px;
                     transform: rotateZ(81deg);
@@ -195,4 +195,9 @@ header {
             }
         }
     }
+}
+
+.button {
+    padding: 4px 8px;
+    font-family: 'Summer Loving Sans';
 }

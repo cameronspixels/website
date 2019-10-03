@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -532,11 +531,11 @@ table {
 }
 
 :root {
-  --purple: 	#731DD8;
-  --blue: 	#48A9A6;
-  --white: 	#E4DFDA;
-  --very-white: #FFF;
-  --black: 	#1F271B;
+  --purple: 	    #731DD8;
+  --blue:         #48A9A6;
+  --white: 	    #E4DFDA;
+  --very-white:   #FFF;
+  --black: 	    #1F271B;
 }
 
 body {
@@ -556,7 +555,7 @@ header {
 }
 
 .home header .intro__heading {
-  color: #48A9A6;
+  color: var(--blue);
 }
 
 .home header .intro__sub {
@@ -564,7 +563,7 @@ header {
 }
 
 .about header {
-  background-color: #48A9A6;
+  background-color: var(--blue);
 }
 
 .about header .intro__heading {
@@ -577,7 +576,7 @@ header {
 }
 
 .portfolio header {
-  background-color: #48A9A6;
+  background-color: var(--blue);
 }
 
 .portfolio header .intro__heading {
@@ -687,7 +686,7 @@ header .intro__sub {
 
 .main .main-section.white {
   background-color: var(--very-white);
-  color: #48A9A6;
+  color: var(--blue);
 }
 
 .main .about__image {
@@ -730,7 +729,7 @@ header .intro__sub {
   font-size: 14vw;
   line-height: 1;
   text-align: center;
-  color: #48A9A6;
+  color: var(--blue);
 }
 
 .main .about__text {
@@ -784,7 +783,7 @@ header .intro__sub {
 .main .portfolio__link p:after {
   content: '|';
   font-family: 'Summer Loving Regular';
-  color: #48A9A6;
+  color: var(--blue);
   font-size: 20rem;
   line-height: 1;
   position: absolute;
@@ -806,4 +805,9 @@ header .intro__sub {
           transform: rotateZ(81deg);
   -webkit-clip-path: ellipse(108% 190% at 0 179%);
           clip-path: ellipse(108% 190% at 0 179%);
+}
+
+.button {
+  padding: 4px 8px;
+  font-family: 'Summer Loving Sans';
 }
